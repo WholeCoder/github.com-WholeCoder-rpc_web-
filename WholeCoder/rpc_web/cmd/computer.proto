@@ -1,0 +1,11 @@
+syntax = "proto3";
+package main;
+option go_package=".;cmd";
+
+message Computer {
+    string Body = 1;
+}
+
+service ComputerService {
+    rpc SayHello(Computer) returns (Computer) {}
+}

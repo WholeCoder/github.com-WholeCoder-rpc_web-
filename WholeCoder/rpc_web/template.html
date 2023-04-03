@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Elite Hackers</title>
+	<style>
+  		tr:nth-child(odd) {
+      		background-color: #f2f2f2;
+  		}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/css/theme.default.min.css">
+</head>
+<body>
+    Welcome to our hacker site!
+    <br/><br />
+	<table border="1" id="my-table" class="tablesorter" style="width: 70%;">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Type</th>
+                <th></th>
+			<tr>
+		</thead>
+        <tbody>
+            {{range .}}
+            <tr>
+                <td>
+                    <a href="/hacker/{{.Path}}">{{.Name}}</a>
+                    <br/>
+                </td>
+				<td>
+					<b>{{.Type}}</b>
+				</td>
+                <td>
+                    <b>1337</b>
+                </td>
+            </tr>
+            {{end}}
+        </tbody>
+    </table>
+	<br />
+	<p><a href="/computer/Turing">Turing</a></p>
+	<script type="text/javascript">
+		$(document).ready(function() {
+	    	$("#my-table").tablesorter();
+		});
+	</script>
+</body>
+</html>

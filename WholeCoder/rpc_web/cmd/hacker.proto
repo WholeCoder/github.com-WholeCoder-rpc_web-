@@ -1,0 +1,11 @@
+syntax = "proto3";
+package main;
+option go_package=".;cmd";
+
+message Hacker {
+    string name = 1;
+}
+
+service HackerService {
+    rpc SayHello(Hacker) returns (Hacker) {}
+}
