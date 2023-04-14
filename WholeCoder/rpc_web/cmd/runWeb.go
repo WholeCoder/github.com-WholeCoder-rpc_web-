@@ -13,13 +13,8 @@ import (
 // runWebCmd represents the runWeb command
 var runWebCmd = &cobra.Command{
 	Use:   "runWeb",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Short: "Run a Web Server to display hacker names and their specialties.",
+	Long:  ``,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("runWeb called")
 		mainRunWebServer()
